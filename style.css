@@ -1,0 +1,293 @@
+/* ==============================
+   RESET DASAR
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FEF3C7;
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            #FDE68A 0,
+            #FDE68A 1px,
+            #FEF3C7 1px,
+            #FEF3C7 20px
+        );
+    background-size: 40px 40px;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* ==============================
+   HEADER ELEGAN
+============================== */
+header {
+    background: linear-gradient(to right, #111, #222);
+    color: #f5f5f5;
+    padding: 20px 0;
+    border-bottom: 2px solid #f6c700;
+}
+header h1 {
+    float: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f6c700;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+header ul {
+    list-style: none;
+}
+header ul li {
+    display: inline;
+    padding: 0 20px;
+}
+header a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+header a:hover {
+    color: #f6c700;
+}
+
+/* ==============================
+   HERO ELEGAN
+============================== */
+.hero {
+    position: relative;
+    background: url("bk") center/cover no-repeat;
+    min-height: 420px;
+    text-align: center;
+    padding: 130px 20px;
+    color: white;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.75)
+    );
+}
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+
+#tombolJelajahi:hover {
+    background: #008f26;
+    transform: translateY(-3px);
+}
+
+/* ==============================
+   KULINER POPULER
+============================== */
+.makanan-populer {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.kartu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.kartu-kuliner {
+    background: white;
+    width: 300px;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+.kartu-kuliner:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.kartu-kuliner img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.kartu-kuliner h4 {
+    margin-top: 12px;
+    color: #008000;
+    font-weight: 700;
+}
+.btn-populer {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #e7c277, #c8a042);
+    color: #1a1a1a;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.btn-populer:hover {
+    background: linear-gradient(135deg, #f3d693, #d3aa49);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+}
+
+
+.detail-link-btn {
+    background: #FFD700;
+    color: #333;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: 0.3s ease;
+}
+.detail-link-btn:hover {
+    background: #e6c200;
+    transform: scale(1.07);
+}
+
+/* ==============================
+   SEJARAH & KONTAK
+============================== */
+.sejarah-section,
+.kontak-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.sejarah-section img {
+    max-width: 60%;
+    border-radius: 10px;
+}
+
+.kontak-section form {
+    max-width: 500px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.kontak-section input,
+.kontak-section textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.kontak-section button {
+    background: #008000;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* ==============================
+   MODE GELAP FULL ELEGAN
+============================== */
+body.dark-mode {
+    background: #1a1a1a !important;
+    color: #f1f1f1;
+}
+
+header.dark-mode {
+    background: #000 !important;
+    border-bottom-color: #caa900 !important;
+}
+
+footer.dark-mode {
+    background: #000 !important;
+}
+
+body.dark-mode .makanan-populer {
+    background: linear-gradient(#111, #1a1a1a);
+    color: #eee;
+}
+
+.kartu-kuliner.dark-mode {
+    background: #2a2a2a;
+    color: #f5f5f5;
+}
+
+.detail-link-btn.dark-mode {
+    background: #444;
+    color: #fff;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .kartu-kuliner { width: 100%; }
+    .sejarah-section img { max-width: 90%; }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 90px 15px;
+    }
+    .kartu-container { gap: 18px; }
+    .kartu-kuliner img { height: 150px; }
+}

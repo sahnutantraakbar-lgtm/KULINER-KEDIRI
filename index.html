@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pojok Kuliner Kediri | Cita Rasa Khas Tanah Jenggala</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <style>
+        .toggle-darkmode {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 14px;
+            background: #333;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        [data-theme="dark"] {
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+        }
+        [data-theme="dark"] header,
+        [data-theme="dark"] footer,
+        [data-theme="dark"] .kartu-kuliner,
+        [data-theme="dark"] .sejarah-section,
+        [data-theme="dark"] .kontak-section {
+            background-color: #1a1a1a !important;
+            color: #e0e0e0 !important;
+        }
+        [data-theme="dark"] nav ul li a {
+            color: #fff !important;
+        }
+        [data-theme="dark"] .button-link,
+        [data-theme="dark"] button {
+            background-color: #444 !important;
+            color: #fff !important;
+        }
+    
+        /* Dark mode untuk bagian Makanan Populer */
+        [data-theme="dark"] .makanan-populer {
+            background-color: #1a1a1a !important;
+            background-image: none !important;
+        }
+
+        /* Overlay gelap jika memakai gambar */
+        .makanan-populer {
+            position: relative;
+            z-index: 1;
+        }
+        .makanan-populer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: -1;
+        }
+        [data-theme="dark"] .makanan-populer::before {
+            background: rgba(0,0,0,0.55);
+        }
+
+        /* Overlay */ gelap jika bagian memakai gambar */
+        .makanan-khas {
+            position: relative;
+            z-index: 1;
+        }
+        .makanan-khas::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: -1;
+        }
+        [data-theme="dark"] .makanan-khas::before {
+            background: rgba(0,0,0,0.55);
+        }
+    
+        /* Dark mode untuk seluruh section Makanan Khas (background utama) */
+        [data-theme="dark"] #makanan-khas,
+        [data-theme="dark"] .makanan-khas-section,
+        [data-theme="dark"] section.makanan-khas-section {
+            background-color: #1a1a1a !important;
+            background-image: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="toggle-darkmode" id="modeToggle">🌙 Mode Gelap</div>
+
+<!-- ==== SELURUH KONTEN ASLI USER DITEMPELKAN UTUH DI SINI ==== -->
+<header data-aos="fade-down">
+        <div class="container">
+            <h1>Kediri Kuliner</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#populer">Populer</a></li>
+                    <li><a href="#sejarah-tahu">Sejarah</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero" data-aos="fade-up">
+            <div class="container">
+                <h2>Jelajahi Cita Rasa Kediri</h2>
+                <p>Temukan Tahu Takwa, Gethuk Pisang,Soto kediri,Sate bekicot,Carang mas, dan nasi Pecel tumpang!</p>
+                
+                <a href="#populer" class="btn-populer">Lihat Kuliner Populer</a>
+
+            </div>
+        </section>
+
+        <section id="populer" class="makanan-populer" data-aos="fade-up">
+            <div class="container">
+                <h3>Makanan Khas Wajib Coba</h3>
+
+                <div class="kartu-container" data-aos="fade-up" data-aos-delay="150">
+
+                    <div class="kartu-kuliner" data-aos="zoom-in">
+                        <img src="kun" alt="kun">
+                        <h4>Tahu Takwa (Tahu Kuning)</h4>
+                        <p>Tahu khas Kediri yang berwarna kuning cerah, kenyal, dan memiliki rasa gurih yang unik. Wajib dijadikan oleh-oleh!</p>
+                        <a href="tahu takwa.html" class="detail-link-btn">Baca Detail</a>
+                    </div>
+
+                    <div class="kartu-kuliner" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="pcl" alt="Nasi Pecel Tumpang">
+                        <h4>Nasi Pecel Tumpang</h4>
+                        <p>Perpaduan bumbu pecel dengan sambal tumpang (tempe busuk) yang menciptakan rasa pedas dan kaya umami.</p>
+                        <a href="pecel tumpang.html" class="detail-link-btn">Baca Detail</a>
+                    </div>
+
+                    <div class="kartu-kuliner" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="st" alt="Soto Kediri"> 
+                        <h4>Soto Kediri</h4>
+                        <p>Soto ayam dengan kuah kuning kental santan yang kaya rempah, khas Kediri. Ciri khasnya adalah kuah yang keruh.</p>
+                        <a href="soto.html" class="detail-link-btn">Baca Detail</a>
+                    </div>
+
+                    <div class="kartu-kuliner" data-aos="zoom-in">
+                        <img src="bt" alt="Sate Bekicot">
+                        <h4>Sate Bekicot</h4>
+                        <p>Olahan daging bekicot yang dimasak dengan bumbu kacang atau pedas manis. Makanan ekstrem yang kaya protein.</p>
+                        <a href="bekicot.html" class="detail-link-btn">Baca Detail</a>
+                    </div>
+
+                    <div class="kartu-kuliner" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="gt" alt="Gethuk Pisang">
+                        <h4>Gethuk Pisang</h4>
+                        <p>Kue tradisional berbahan pisang raja nangka, manis asam segar, dibungkus daun pisang. Sempurna untuk camilan.</p>
+                        <a href="gethuk pisang.html" class="detail-link-btn">Baca Detail</a>
+                    </div>
+
+                    <div class="kartu-kuliner" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="cr" alt="cr"> 
+                        <h4>Carang Mas</h4>
+                        <p>carang mas, juga dikenal sebagai grubi, ubi kremes, atau cakar ayam, adalah camilan tradisional Indonesia yang renyah dan manis.</p>
+                        <a href="carang.html" class="detail-link-btn">Baca Detail</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian sejarah tetap sama, ditempelkan seluruhnya -->
+
+        <!-- === SEJARAH TAHU TAKWA === -->
+<section id="sejarah-tahu" class="sejarah-section" data-aos="fade-right">
+    <div class="container sejarah-content">
+        <h3>Sejarah Tahu Takwa (Kuning)</h3>
+        <img src="trh" alt="thk"> 
+        <div class="sejarah-text">
+            <p>Tahu kuning Kediri merupakan salah satu ikon kuliner Jawa Timur yang memiliki sejarah panjang dan kuat dalam perkembangan budaya pangan masyarakatnya. Keberadaannya bukan sekadar makanan, tetapi bagian dari identitas Kota Kediri yang dikenal luas sebagai “Kota Tahu.” Jejak historisnya dapat ditelusuri sejak awal abad ke-20, masa ketika pengolahan kedelai mulai berkembang sebagai industri rumahan yang sederhana.
+
+Pada mulanya, industri tahu di Kediri dibangun oleh keluarga-keluarga keturunan Tionghoa yang menetap di kawasan Bandar dan Jagalan. Mereka memanfaatkan kedelai sebagai sumber protein yang murah dan mudah diolah. Teknik pengolahan tahu kemudian dipelajari oleh masyarakat pribumi, sehingga produksi tahu secara bertahap menyebar ke berbagai penjuru kota. Pada fase awal ini, tahu yang dihasilkan masih berwarna putih, sama seperti tahu pada umumnya di daerah lain.
+
+Perubahan besar terjadi ketika para pengrajin tahu mulai menambahkan kunyit sebagai pewarna alami. Penambahan kunyit bukan sekadar untuk mempercantik tampilan, tetapi juga untuk mengurangi bau langu kedelai sekaligus berperan sebagai pengawet alami. Dari keputusan sederhana ini muncul ciri khas yang kemudian melekat kuat: tahu berwarna kuning sebagai identitas Kediri. Warna kuning tidak hanya membedakan produk tersebut dari tahu putih, tetapi juga menjadi simbol kualitas dan keunikan produksi rumahan yang bertahan hingga kini.
+
+Memasuki era 1950–1980-an, industri tahu kuning tumbuh semakin pesat. Setelah masa kemerdekaan, kota Kediri mengalami peningkatan aktivitas ekonomi, dan banyak keluarga membuka usaha pembuatan tahu sebagai mata pencaharian utama. Daerah seperti Tinalan, Bandar Lor, dan Cangkring menjadi sentra produksi yang terkenal. Metode pemasaran tradisional turut membantu popularitas tahu kuning; para pedagang membawa pikulan besar dan berkeliling dari kampung ke kampung, membuat rasa dan aroma tahu kuning semakin akrab di lidah masyarakat Jawa Timur.
+
+Pada dekade-dekade berikutnya, tahu kuning tidak hanya bertahan tetapi juga berkembang menjadi ikon wisata kuliner. Meskipun teknologi industri modern mulai diperkenalkan, sebagian besar produsen tetap mempertahankan metode pembuatan tradisional yang dianggap menjaga kualitas dan cita rasa khas. Proses produksi seperti perendaman kedelai, penggilingan, pemasakan, pengepresan manual, hingga perendaman dalam larutan kunyit, masih dilakukan dengan cara-cara turun-temurun.
+
+Kini, Tahu Kuning Kediri bukan hanya produk pangan, tetapi warisan budaya sekaligus sumber kebanggaan masyarakat. Teksturnya yang padat namun lembut, warnanya yang kuning alami, serta rasanya yang gurih menjadikan tahu ini banyak diburu wisatawan dan menjadi oleh-oleh wajib bagi setiap pengunjung Kediri. Keberhasilannya bertahan lebih dari satu abad menunjukkan bahwa makanan tradisional mampu menjadi simbol kota dan identitas masyarakat, ketika dijaga dengan komitmen dan adat yang kua</p>
+        </div>
+    </div>
+</section>
+
+<!-- === SEJARAH PECEL TUMPANG === -->
+<section id="sejarah-pecel" class="sejarah-section" data-aos="fade-left">
+    <div class="container sejarah-content">
+        <h3>Sejarah Nasi Pecel Tumpang</h3>
+        <img src="tmp" alt="pcl"> 
+        <div class="sejarah-text">
+            <p>Nasi Pecel Tumpang merupakan salah satu kuliner khas Kediri yang memiliki sejarah panjang dan erat kaitannya dengan budaya masyarakat Jawa Timur, khususnya wilayah Mataraman. Hidangan ini tidak hanya kaya rasa, tetapi juga kaya makna, karena lahir dari perpaduan tradisi pertanian, kearifan lokal, serta kreativitas masyarakat dalam mengolah bahan-bahan sederhana menjadi sajian yang istimewa.
+
+Asal-usul hidangan ini dapat ditelusuri dari dua elemen utama yang menyusunnya: pecel dan sambal tumpang. Pecel, sebagai makanan berbahan dasar sayuran rebus yang disiram sambal kacang, sudah dikenal sejak era kerajaan-kerajaan Jawa kuno. Catatan tradisi menyebutkan bahwa masyarakat Jawa pada masa itu sering mengonsumsi sayuran rebus dengan bumbu kacang karena cocok dengan pola bertani dan hasil kebun yang melimpah. Pecel kemudian menyebar ke berbagai wilayah di Jawa Timur, salah satunya Kediri, yang waktu itu menjadi pusat aktivitas ekonomi dan budaya agraris.
+
+Sementara itu, sambal tumpang memiliki perjalanan sejarah yang lebih unik. Tumpang dibuat dari tempe semangit, yaitu tempe yang sengaja dibiarkan hampir busuk hingga menghasilkan aroma khas. Teknik fermentasi lanjutan ini lahir dari kebiasaan masyarakat pedesaan yang tidak suka membuang bahan pangan yang masih bisa diolah. Tempe semangit dimasak bersama santan, cabai, dan bumbu tradisional, menghasilkan cita rasa gurih, pedas, dan beraroma tajam yang khas. Konon, pada masa-masa sulit seperti paceklik, sambal tumpang justru menjadi penyelamat, karena bisa dibuat dari tempe tua yang masih tersisa.
+
+Perpaduan antara pecel dan sambal tumpang diperkirakan mulai populer di Kediri pada awal abad ke-20. Kota Kediri yang dikenal subur dan dekat dengan pusat perdagangan membuat berbagai varian masakan berkembang pesat. Pecel tumpang kemudian menjadi hidangan keseharian masyarakat, terutama sebagai sarapan pagi. Perpaduan sambal kacang yang manis-pedas, sayur segar dari hasil kebun, serta sambal tumpang yang beraroma kuat, menciptakan rasa yang kompleks namun harmonis—sebuah ciri khas kuliner Kediri.
+
+Hidangan ini semakin melekat dengan identitas Kediri seiring berkembangnya usaha kuliner di pasar tradisional dan warung-warung pinggir jalan. Mulai dari Pasar Pahing, Pasar Setono Betek, hingga daerah Selomangleng, pecel tumpang menjadi sajian yang mudah ditemukan dan menjadi favorit masyarakat. Tidak hanya menjadi makanan rumahan, tetapi juga menjadi simbol keramahan dan kesederhanaan orang Kediri. Banyak pendatang mengingat Kediri dari aroma sambal tumpangnya yang khas.
+
+Dalam perkembangannya, Nasi Pecel Tumpang tidak hanya dipandang sebagai makanan lezat, tetapi juga representasi warisan budaya lokal. Kombinasi bahan-bahan tradisional dan metode pengolahan turun-temurun menunjukkan kemampuan masyarakat Kediri untuk menjaga tradisi kuliner sambil tetap berinovasi. Hingga kini, pecel tumpang menjadi salah satu ikon kota Kediri, disajikan dalam berbagai kesempatan mulai dari santapan harian hingga event pariwisata kuliner.
+
+Dengan sejarah panjang yang berakar pada kebijaksanaan lokal dan kreativitas masyarakat, Nasi Pecel Tumpang tidak sekadar hidangan; ia adalah cerita tentang identitas, kebersahajaan, dan kekayaan budaya Kediri yang terus hidup dari generasi ke generas</p>
+        </div>
+    </div>
+</section>
+
+<!-- === SEJARAH SOTO KEDIRI === -->
+<section id="sejarah-soto" class="sejarah-section" data-aos="fade-right">
+    <div class="container sejarah-content">
+        <h3>Sejarah Soto Kediri (Kuah Santan)</h3>
+        <img src="stk" alt="sj"> 
+        <div class="sejarah-text">
+            <p>Soto Kediri merupakan salah satu kuliner tradisional Jawa Timur yang memiliki sejarah panjang dan menjadi bagian penting dari identitas gastronomi Kota Kediri. Dengan cita rasa kuah bening yang gurih, penggunaan rempah yang halus, serta pelengkap khas berupa koyah kelapa, Soto Kediri telah berkembang menjadi hidangan yang tidak hanya lezat, tetapi juga sarat nilai budaya dan perjalanan sejarah masyarakatnya.
+
+Jejak awal soto di Jawa sendiri diyakini berasal dari pengaruh budaya Tionghoa pada abad ke-19. Pada masa itu, para pedagang Tionghoa membawa hidangan berkuah bernama caudo—sejenis sup daging dengan bumbu ringan. Masyarakat lokal kemudian mengadaptasi hidangan tersebut dengan bahan dan bumbu Nusantara, sehingga berkembang menjadi beragam jenis soto di berbagai daerah. Kediri, sebagai kota perdagangan yang cukup ramai sejak era kolonial, ikut mendapat pengaruh ini dan mulai mengembangkan gaya sotonya sendiri.
+
+Soto Kediri muncul dari lingkungan masyarakat agraris dan pedagang kecil yang memerlukan makanan hangat, ringan, dan mengenyangkan. Berbeda dari soto Madura atau soto Lamongan, soto Kediri memiliki ciri khas kuah bening kekuningan karena bumbu yang digunakan tidak terlalu berat dan tidak memakai santan. Penggunaan koyah—taburan kelapa sangrai yang ditumbuk bersama bawang dan rempah—menjadi identitas yang membedakan Soto Kediri dari soto daerah lain. Koyah inilah yang memberikan aroma gurih khas dan tekstur lembut pada setiap suapan.
+
+Pada awal abad ke-20, beberapa pedagang mulai menjual soto dengan gaya khas Kediri di pasar-pasar tradisional seperti Pasar Setono Betek, Pasar Bandar, dan Pasar Pahing. Mereka menjajakan soto dengan pikulan atau gerobak sederhana, biasanya pada pagi hari. Soto kemudian menjadi sarapan favorit para petani, buruh, dan pekerja pasar karena harganya terjangkau dan porsinya pas untuk mengawali aktivitas harian.
+
+Popularitas Soto Kediri meningkat pesat memasuki era 1960–1980-an. Banyak warung soto bermunculan di berbagai sudut kota, sebagian di antaranya bertahan hingga puluhan tahun dan menjadi legenda kuliner lokal. Kehadirannya tidak hanya sebagai makanan, tetapi juga tempat berkumpul, berbincang, dan mempererat hubungan sosial antarwarga. Dari sinilah identitas soto sebagai bagian dari kehidupan masyarakat Kediri semakin menguat.
+
+Kini, Soto Kediri telah menjadi kuliner ikonik yang diburu wisatawan. Bukan hanya karena rasanya yang lembut dan gurih, tetapi juga karena keaslian resep tradisional yang masih dipertahankan. Banyak warung tetap memasak kuahnya dengan teknik turun-temurun, menggunakan ayam kampung atau daging sapi, serta menyajikannya dengan perpaduan kecambah, seledri, koya, dan jeruk limau. Cita rasa yang sederhana namun kaya inilah yang membuat Soto Kediri tetap hidup dalam ingatan banyak orang yang pernah mencicipinya.
+
+Di tengah modernisasi kuliner, Soto Kediri tidak kehilangan jati dirinya. Hidangan ini menjadi saksi bagaimana budaya lokal berinteraksi dengan pengaruh luar, kemudian bertransformasi menjadi tradisi kuliner yang memiliki karakter kuat. Soto Kediri bukan hanya makanan hangat di pagi hari, tetapi juga bagian dari perjalanan sejarah dan kehidupan masyarakat Kediri selama lebih dari satu aba</p>
+        </div>
+    </div>
+</section>
+
+<!-- === SEJARAH BEKICOT === -->
+<section id="sejarah-bekicot" class="sejarah-section" data-aos="fade-left">
+    <div class="container sejarah-content">
+        <h3>Sejarah Sate Bekicot (02)</h3>
+        <img src="pbrk" alt="pbrk"> 
+        <div class="sejarah-text">
+            <p>Sate bekicot merupakan salah satu kuliner unik yang menjadi identitas daerah Kediri, Jawa Timur. Keunikan ini tidak hanya terletak pada bahan dasarnya yang menggunakan bekicot, tetapi juga pada sejarah panjang yang membentuknya sebagai ikon kuliner lokal. Munculnya sate bekicot tidak bisa dilepaskan dari peran Desa Jengkol di Kecamatan Plosoklaten, sebuah wilayah yang sejak lama dikenal sebagai sentra peternakan sekaligus pengolahan bekicot. Dari desa inilah perjalanan kuliner ini dimulai, berkembang, dan akhirnya dikenal luas hingga sekarang.
+
+Awal mula hadirnya sate bekicot dapat ditelusuri pada tahun 1970-an, ketika masyarakat Desa Jengkol mulai memanfaatkan bekicot yang banyak ditemukan di sekitar kebun dan sawah. Pada masa itu, bekicot belum dianggap sebagai sumber bahan pangan utama. Sebaliknya, ia lebih sering digunakan untuk keperluan pengobatan tradisional. Banyak warga meyakini bahwa bekicot dapat membantu meredakan penyakit asma, meningkatkan stamina, dan menyembuhkan beberapa keluhan fisik lainnya. Keyakinan tersebut mendorong masyarakat untuk membudidayakan bekicot dalam jumlah yang lebih teratur.
+
+Seiring waktu, muncul kebutuhan untuk mengolah bekicot menjadi makanan yang lebih mudah diterima serta bernilai jual lebih tinggi. Dari sinilah ide untuk mengolah bekicot menjadi sate muncul. Teknik sate dipilih karena sesuai dengan budaya kuliner Jawa Timur yang kaya akan bumbu rempah dan didominasi rasa gurih pedas. Dengan proses perebusan yang lama untuk menghilangkan lendir dan aroma khas bekicot, masyarakat akhirnya menemukan cara untuk menyajikan bekicot sebagai hidangan yang lezat dan layak jual. Perkembangan ini menandai awal transformasi bekicot dari bahan pangan alternatif menjadi produk kuliner khas.
+
+Pada era 1980 hingga 1990-an, sate bekicot mulai dikenal luas. Banyak pedagang yang kemudian membuka lapak di sepanjang jalan menuju Desa Jengkol, sehingga desa tersebut mendapat julukan “Kampung Bekicot”. Kehadiran para pedagang ini tidak hanya memopulerkan sate bekicot, tetapi juga memicu lahirnya berbagai olahan lain seperti oseng bekicot, keripik bekicot, dan abon bekicot. Peran media lokal serta dukungan pemerintah daerah turut mendorong pertumbuhan popularitas kuliner ini, menjadikannya salah satu daya tarik wisata kuliner bagi para pengunjung yang datang ke Kediri.
+
+Hingga kini, sate bekicot tetap menjadi kuliner yang melekat kuat pada identitas Kediri. Teksturnya yang kenyal, aroma rempah yang kuat, serta rasa gurih pedas menjadikan kuliner ini memiliki penggemar tersendiri, meskipun bagi sebagian orang terasa ekstrem. Namun justru keunikan inilah yang membuat sate bekicot menjadi simbol kreativitas masyarakat Kediri dalam memanfaatkan potensi lokal. Dari sebuah bahan sederhana yang sering dianggap hama, mereka mampu menciptakan produk kuliner yang tidak hanya bertahan selama puluhan tahun, tetapi juga menambah kekayaan gastronomi Indonesia</p>
+        </div>
+    </div>
+</section>
+
+<!-- === SEJARAH CARANG MAS === -->
+<section id="sejarah-carang-mas" class="sejarah-section" data-aos="fade-up">
+    <div class="container sejarah-content">
+        <h3>Sejarah Carang Mas</h3>
+        <img src="crh" alt="crg"> 
+        <div class="sejarah-text">
+            <p>Carang mas adalah salah satu jajanan tradisional Jawa Timur yang juga dikenal sebagai kuliner khas Kediri. Camilan ini dibuat dari ubi jalar yang diparut halus lalu digoreng hingga renyah dan diberi balutan gula merah, sehingga menghasilkan tekstur kriuk dengan rasa manis karamel. Walaupun sederhana, carang mas memiliki sejarah panjang yang berakar dari tradisi masyarakat agraris di Kediri yang memanfaatkan hasil bumi untuk menciptakan makanan yang awet, murah, dan lezat.
+
+Asal-usul carang mas tidak dapat dilepaskan dari melimpahnya ubi jalar di wilayah Kediri sejak masa kolonial. Tanaman ini tumbuh subur di tanah Kediri yang hangat dan berpasir, sehingga menjadi salah satu sumber karbohidrat utama masyarakat pedesaan. Pada masa ketika pasokan beras sering terbatas—terutama pada awal abad ke-20—ubi jalar menjadi bahan pangan penting untuk kebutuhan sehari-hari. Dari sinilah muncul berbagai olahan berbasis ubi, termasuk makanan ringan seperti carang mas.
+
+Nama “carang mas” sendiri berasal dari bentuknya yang menyerupai carang (ranting atau serpihan) dan warnanya yang keemasan seperti emas setelah dibalut gula merah cair. Masyarakat zaman dulu menciptakan camilan ini sebagai cara untuk memanfaatkan ubi jalar matang yang tidak habis dikonsumsi. Dengan digoreng tipis-tipis dan dilapisi gula, ubi tersebut menjadi lebih tahan lama dan praktis untuk disimpan atau dibawa saat bekerja di ladang.
+
+Pada tahun 1960–1980-an, carang mas mulai banyak dijajakan di pasar tradisional di wilayah Kediri, Wates, Pare, hingga kawasan lereng Gunung Kelud. Banyak ibu rumah tangga yang memproduksinya sebagai usaha kecil berbasis rumahan. Rasanya yang manis renyah, harganya yang terjangkau, dan kemasannya yang sederhana membuat carang mas diminati sebagai jajanan sekolah, camilan keluarga, atau suguhan saat acara desa. Pada masa itu, keberadaan carang mas turut memperkaya ragam kuliner tradisional Kediri, berdampingan dengan gethuk pisang, onde-onde ketawa, dan intip.
+
+Hingga kini, carang mas tetap dipertahankan sebagai makanan tradisional yang diwariskan turun-temurun. Walau camilan modern semakin banyak bermunculan, carang mas tetap mendapat tempat khusus karena cita rasanya yang autentik dan proses pembuatannya yang masih tradisional. Bagi masyarakat Kediri, carang mas bukan hanya sekadar makanan, tetapi juga simbol kreativitas dalam mengolah hasil bumi serta bukti sederhana tentang bagaimana tradisi kuliner dapat bertahan melintasi zaman</p>
+        </div>
+    </div>
+</section>
+
+<section id="kontak" class="kontak-section" data-aos="fade-up">
+    <div class="container">
+        <h3>Hubungi Kami</h3>
+        <p>Punya saran warung yang harus kami coba? Kirimkan pesan!</p>
+        <form action="mailto:kredelz12345@gmail.com" method="post" enctype="text/plain">
+            <input type="text" placeholder="Nama Anda" name="Nama" required>
+            <input type="email" placeholder="Email Anda" name="Email" required>
+            <textarea placeholder="Pesan Anda" name="Pesan" required></textarea>
+            <button type="submit">Kirim Saran</button>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<footer data-aos="fade-up">
+    <div class="container">
+        <p>&copy; 2024 Pojok Kuliner Kediri. Dibuat oleh Siswa SMA Lokal.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+    const toggle = document.getElementById("modeToggle");
+    const html = document.documentElement;
+
+    toggle.addEventListener("click", () => {
+        const now = html.getAttribute("data-theme");
+        const newTheme = now === "light" ? "dark" : "light";
+        html.setAttribute("data-theme", newTheme);
+        toggle.textContent = newTheme === "light" ? "🌙 Mode Gelap" : "☀️ Mode Terang";
+    });
+</script>
+
+</body>
